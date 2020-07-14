@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Text;
 
 namespace Task1
 {
@@ -20,7 +19,11 @@ namespace Task1
 
         public static Vector operator +(Vector vector1, Vector vector2) => new Vector(vector1.X + vector2.X, vector1.Y + vector2.Y, vector1.Z + vector2.Z);
 
+        public static Vector operator +(Vector vector, int number) => new Vector(vector.X + number, vector.Y + number, vector.Z + number);
+
         public static Vector operator -(Vector vector1, Vector vector2) => new Vector(vector1.X - vector2.X, vector1.Y - vector2.Y, vector1.Z - vector2.Z);
+
+        public static Vector operator -(Vector vector, int number) => new Vector(vector.X - number, vector.Y - number, vector.Z - number);
 
         public static Vector operator -(Vector vector) => new Vector(vector.X * (-1), vector.Y * (-1), vector.Z * (-1));
 
@@ -28,14 +31,14 @@ namespace Task1
 
         public static Vector operator *(Vector vector, int number) => new Vector(vector.X * number, vector.Y * number, vector.Z * number);
 
-        public static Vector operator /(Vector vector1, Vector vector2) => new Vector(vector1.X - vector2.X, vector1.Y - vector2.Y, vector1.Z - vector2.Z);
+        public static Vector VectorMultiplication(Vector vector1, Vector vector2) => new Vector((vector1.Y * vector2.Z) - (vector1.Z * vector2.Y), (vector1.Z * vector2.X) - (vector1.X * vector2.Z), (vector1.X * vector2.Y) - (vector1.Y * vector1.X));
+
+        public static double GetLength(Vector vector) => Math.Sqrt( (vector.X * vector.X) + (vector.Y * vector.Y) + (vector.Z * vector.Z));
 
         public static Vector operator /(Vector vector, int number)
         {
             if (number == 0)
-            {
                 throw new ArgumentException("Error, division by zero!", "number");
-            }
 
             return new Vector (vector.X / number, vector.Y / number, vector.Z / number);
         }
