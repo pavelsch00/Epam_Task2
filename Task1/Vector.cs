@@ -20,5 +20,6 @@ namespace Task1
         public static Vector operator + (Vector vector1, Vector vector2) => new Vector(vector1.X + vector2.X, vector1.Y + vector2.Y, vector1.Z + vector2.Z);
         public static Vector operator - (Vector vector1, Vector vector2) => new Vector(vector1.X - vector2.X, vector1.Y - vector2.Y, vector1.Z - vector2.Z);
 
+
     }
 }
