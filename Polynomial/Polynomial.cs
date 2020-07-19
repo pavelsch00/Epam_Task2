@@ -1,4 +1,6 @@
-﻿namespace Polynomial
+﻿using System;
+
+namespace Polynomial
 {
     /// <summary>
     ///   Class Polynomial.
@@ -95,6 +97,9 @@
         /// </summary>
         public static Polynomial operator /(Polynomial polynomial, double number)
         {
+            if (number == 0)
+                throw new ArgumentException("Error, division by zero!", "number");
+
             var newPolynomialCoefficients = polynomial.Coefficients;
 
             for (int i = 0; i < newPolynomialCoefficients.Length; i++)
