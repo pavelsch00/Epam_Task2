@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30225.117
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task1", "Task1\Task1.csproj", "{C75084C7-FEA6-4CEC-9945-9FA3757F0786}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task1", "Task1\Task1.csproj", "{C75084C7-FEA6-4CEC-9945-9FA3757F0786}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task2", "Polynomial\Task2.csproj", "{05BF6C54-4B1D-4B17-B02D-66C6640D4972}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{C75084C7-FEA6-4CEC-9945-9FA3757F0786}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C75084C7-FEA6-4CEC-9945-9FA3757F0786}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C75084C7-FEA6-4CEC-9945-9FA3757F0786}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05BF6C54-4B1D-4B17-B02D-66C6640D4972}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05BF6C54-4B1D-4B17-B02D-66C6640D4972}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05BF6C54-4B1D-4B17-B02D-66C6640D4972}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05BF6C54-4B1D-4B17-B02D-66C6640D4972}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
