@@ -1,5 +1,9 @@
 ﻿namespace Polynomial
 {
+    /// <summary>
+    ///   Class Polynomial.
+    ///   The class is designed to work with a polynomial.
+    /// </summary>
     public class Polynomial
     {
         #region Properties
@@ -17,6 +21,12 @@
         #endregion
 
         #region Methods
+        /// <summary>
+        ///  Method +.
+        ///  Addition of two polynomial
+        ///  Input parameters: Polynomial, Polynomial.
+        ///  Returned value: Polynomial.
+        /// </summary>
         public static Polynomial operator +(Polynomial polynomial1, Polynomial polynomial2)
         {
             int maxDegree;
@@ -29,21 +39,27 @@
 
             for (int i = 0; i < maxDegree; i++)
             {
-                double coefficient1 = 0;
-                double coefficient2 = 0;
+                double polynomialСoefficient1 = 0;
+                double polynomialСoefficient2 = 0;
 
                 if (i < polynomial1.Degree)
-                    coefficient1 = polynomial1.Coefficients[i];
+                    polynomialСoefficient1 = polynomial1.Coefficients[i];
 
                 if (i < polynomial2.Degree)
-                    coefficient2 = polynomial2.Coefficients[i];
+                    polynomialСoefficient2 = polynomial2.Coefficients[i];
 
-                newPolynomialCoefficients[i] = coefficient1 + coefficient2;
+                newPolynomialCoefficients[i] = polynomialСoefficient1 + polynomialСoefficient2;
             }
 
             return new Polynomial(newPolynomialCoefficients);
         }
 
+        /// <summary>
+        ///  Method -.
+        ///  Subtraction of two Polynomial.
+        ///  Input parameters: Polynomial, Polynomial.
+        ///  Returned value: Polynomial.
+        /// </summary>
         public static Polynomial operator -(Polynomial polynomial1, Polynomial polynomial2)
         {
             int maxDegree;
@@ -56,22 +72,27 @@
 
             for (int i = 0; i < maxDegree; i++)
             {
-                double coefficient1 = 0;
-                double coefficient2 = 0;
+                double polynomialСoefficient1 = 0;
+                double polynomialСoefficient2 = 0;
 
                 if (i < polynomial1.Degree)
-                    coefficient1 = polynomial1.Coefficients[i];
+                    polynomialСoefficient1 = polynomial1.Coefficients[i];
 
                 if (i < polynomial2.Degree)
-                    coefficient2 = polynomial2.Coefficients[i];
+                    polynomialСoefficient2 = polynomial2.Coefficients[i];
 
-                newPolynomialCoefficients[i] = coefficient1 - coefficient2;
+                newPolynomialCoefficients[i] = polynomialСoefficient1 - polynomialСoefficient2;
             }
 
             return new Polynomial(newPolynomialCoefficients);
         }
 
-
+        /// <summary>
+        ///  Method /.
+        ///  The method of dividing a polynomial by a number.
+        ///  Input parameters: Polynomial, double.
+        ///  Returned value: Polynomial.
+        /// </summary>
         public static Polynomial operator /(Polynomial polynomial, double number)
         {
             var newPolynomialCoefficients = polynomial.Coefficients;
@@ -82,6 +103,12 @@
             return new Polynomial(newPolynomialCoefficients);
         }
 
+        /// <summary>
+        ///  Method /.
+        ///  Method of multiplying a polynomial by a number.
+        ///  Input parameters: Polynomial, double.
+        ///  Returned value: Polynomial.
+        /// </summary>
         public static Polynomial operator *(Polynomial polynomial, double number)
         {
             var newPolynomialCoefficients = polynomial.Coefficients;
@@ -92,6 +119,12 @@
             return new Polynomial(newPolynomialCoefficients);
         }
 
+        /// <summary>
+        ///  Method /.
+        ///  Method of multiplying a polynomial by a polynomial number.
+        ///  Input parameters: Polynomial, double.
+        ///  Returned value: Polynomial.
+        /// </summary>
         public static Polynomial operator *(Polynomial polynomial1, Polynomial polynomial2)
         {
             var newPolynomialCoefficients = new double[polynomial1.Degree + polynomial2.Degree - 1];
