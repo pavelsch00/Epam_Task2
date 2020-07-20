@@ -8,21 +8,16 @@ namespace Polynomial
     /// </summary>
     public class Polynomial
     {
-        #region Properties
         public readonly double[] Coefficients;
 
         public readonly int Degree;
-        #endregion
 
-        #region Constructor
         public Polynomial(params double[] coefficients)
         {
             Coefficients = coefficients;
             Degree = Coefficients.Length;
         }
-        #endregion
 
-        #region Methods
         /// <summary>
         ///  Method +.
         ///  Addition of two polynomial
@@ -175,7 +170,6 @@ namespace Polynomial
         ///  Returned value: string.
         /// </summary>
         public override string ToString() => $"Coefficients: {Coefficients}, Degree: {Degree}";
-        #endregion
     }
 }
 

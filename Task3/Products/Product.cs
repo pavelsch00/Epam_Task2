@@ -1,9 +1,14 @@
-﻿using System;
-
-namespace Task3
+﻿namespace Task3
 {
     public class Product : IProduct
     {
+        public Product(string name, string type, decimal price)
+        {
+            Name = name;
+            Type = type;
+            Price = price;
+        }
+
         public string Type { get; set; }
 
         public string Name { get; set; }
@@ -40,6 +45,7 @@ namespace Task3
         ///  Input parameters: null.
         ///  Returned value: string.
         /// </summary>
+
         public override string ToString() => $"Type: {Type}, Name: {Name}, Price: {Price}";
     }
 }

@@ -8,24 +8,19 @@ namespace Task1
     /// </summary>
     public class Vector
     {
-        #region Constructor
         public Vector(int x, int y, int z)
         {
             X = x;
             Y = y;
             Z = z;
         }
-        #endregion
 
-        #region Properties
         public int X { get; set; }
 
         public int Y { get; set; }
 
         public int Z { get; set; }
-        #endregion
 
-        #region Methods
         /// <summary>
         ///  Method +.
         ///  Addition of two vectors
@@ -143,6 +138,5 @@ namespace Task1
         ///  Returned value: string.
         /// </summary>
         public override string ToString() => $"({ X }; { Y }; { Z })\n";
-        #endregion
     }
 }
