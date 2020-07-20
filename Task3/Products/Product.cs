@@ -45,7 +45,6 @@
         ///  Input parameters: null.
         ///  Returned value: string.
         /// </summary>
-
         public override string ToString() => $"Type: {Type}, Name: {Name}, Price: {Price}";
     }
 }

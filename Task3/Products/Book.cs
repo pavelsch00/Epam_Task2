@@ -5,6 +5,7 @@
         public Book(string name, string type, decimal price) : base(name, type, price)
         {
         }
+
         /// <summary>
         /// Method converts an object to a Food class
         ///  Input parameters: Book.
@@ -39,13 +40,6 @@
         ///  Returned value: decimal.
         /// </summary>
         public static explicit operator decimal(Book book) => book.Price;
-
-        /// <summary>
-        ///  Method Equals.
-        ///  Lets you compare two objects.
-        ///  Input parameters: object.
-        ///  Returned value: bool.
-        /// </summary>
 
         /// <summary>
         /// The method of addition objects of the same type
