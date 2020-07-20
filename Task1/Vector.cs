@@ -4,22 +4,22 @@ namespace Task1
 {
     /// <summary>
     ///  Class Vector.
-    ///   The class is designed to work with three-dimensional vectors.
+    ///  The class is designed to work with three-dimensional vectors.
     /// </summary>
     public class Vector
     {
-        public Vector(int x, int y, int z)
+        public Vector(float x, float y, float z)
         {
             X = x;
             Y = y;
             Z = z;
         }
 
-        public int X { get; set; }
+        public float X { get; set; }
 
-        public int Y { get; set; }
+        public float Y { get; set; }
 
-        public int Z { get; set; }
+        public float Z { get; set; }
 
         /// <summary>
         ///  Method +.
@@ -36,6 +36,14 @@ namespace Task1
         ///  Returned value: Vector.
         /// </summary>
         public static Vector operator +(Vector vector, int number) => new Vector(vector.X + number, vector.Y + number, vector.Z + number);
+
+        /// <summary>
+        ///  Method +.
+        ///  Addition of a vector and a number.
+        ///  Input parameters: Vector, float.
+        ///  Returned value: Vector.
+        /// </summary>
+        public static Vector operator +(Vector vector, float number) => new Vector(vector.X + number, vector.Y + number, vector.Z + number);
 
         /// <summary>
         ///  Method -.
@@ -55,6 +63,14 @@ namespace Task1
 
         /// <summary>
         ///  Method -.
+        ///  Subtract a number from a vector.
+        ///  Input parameters: Vector, int.
+        ///  Returned value: Vector.
+        /// </summary>
+        public static Vector operator -(Vector vector, float number) => new Vector(vector.X - number, vector.Y - number, vector.Z - number);
+
+        /// <summary>
+        ///  Method -.
         ///  Finding the inverse vector.
         ///  Input parameters: Vector.
         ///  Returned value: Vector.
@@ -65,9 +81,9 @@ namespace Task1
         ///  Method *.
         ///  Scalar vector multiplication.
         ///  Input parameters: Vector, Vector.
-        ///  Returned value: int.
+        ///  Returned value: float.
         /// </summary>
-        public static int operator *(Vector vector1, Vector vector2) => (vector1.X * vector2.X) + (vector1.Y * vector2.Y) + (vector1.Z * vector2.Z);
+        public static float operator *(Vector vector1, Vector vector2) => (vector1.X * vector2.X) + (vector1.Y * vector2.Y) + (vector1.Z * vector2.Z);
 
         /// <summary>
         ///  Method *.
@@ -75,7 +91,7 @@ namespace Task1
         ///  Input parameters: Vector, int.
         ///  Returned value: Vector.
         /// </summary>
-        public static Vector operator *(Vector vector, int number) => new Vector(vector.X * number, vector.Y * number, vector.Z * number);
+        public static Vector operator *(Vector vector, float number) => new Vector(vector.X * number, vector.Y * number, vector.Z * number);
 
         /// <summary>
         ///  Method VectorMultiplication.
@@ -83,7 +99,7 @@ namespace Task1
         ///  Input parameters: Vector, Vector.
         ///  Returned value: Vector.
         /// </summary>
-        public static Vector VectorMultiplication(Vector vector1, Vector vector2) => new Vector((vector1.Y * vector2.Z) - (vector1.Z * vector2.Y), (vector1.Z * vector2.X) - (vector1.X * vector2.Z), (vector1.X * vector2.Y) - (vector1.Y * vector1.X));
+        public static Vector VectorMultiplication(Vector vector1, Vector vector2) => new Vector((vector1.Y * vector2.Z) - (vector1.Z * vector2.Y), (vector1.Z * vector2.X) - (vector1.X * vector2.Z), (vector1.X * vector2.Y) - (vector1.Y * vector2.X));
 
         /// <summary>
         ///  Method /.
