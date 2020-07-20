@@ -13,18 +13,18 @@ namespace Task3_Tests
             decimal price1 = 1.8m;
             string type1 = "book";
 
-            Food foot1 = new Food(name1, type1, price1);
+            Food food1 = new Food(name1, type1, price1);
 
             string name2 = "Milk";
             decimal price2 = 1.8m;
             string type2 = "book";
 
-            Food foot2 = new Food(name2, type2, price2);
+            Food food2 = new Food(name2, type2, price2);
 
             bool expected = true;
 
             // act
-            bool actual = Equals(foot1, foot2);
+            bool actual = Equals(food1, food2);
 
             // assert;
             Assert.Equal(expected, actual);
@@ -92,7 +92,7 @@ namespace Task3_Tests
         }
 
         [Fact]
-        public void CastToBook_Fook_Bood()
+        public void CastToBook_Food_Bood()
         {
             // arrange
             string name1 = "Рerring";
@@ -127,7 +127,6 @@ namespace Task3_Tests
 
             Stationery Stationery2Expected = new Stationery(name2, type2, price2);
 
-
             // assert;
             Assert.Equal(Stationery2Expected, (Stationery)food1);
         }
@@ -148,8 +147,6 @@ namespace Task3_Tests
             string type2 = "food";
 
             Technics technics2Expected = new Technics(name2, type2, price2);
-
-            // act
 
             // assert;
             Assert.Equal(technics2Expected, (Technics)food1);
