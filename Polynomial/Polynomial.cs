@@ -1,6 +1,7 @@
 ﻿using System;
+using System.Linq;
 
-namespace Polynomial
+namespace Polynomials
 {
     /// <summary>
     ///   Class Polynomial.
@@ -152,7 +153,7 @@ namespace Polynomial
             if (Degree != polynomial.Degree)
                 return false;
 
-            return Coefficients == polynomial.Coefficients;
+            return Enumerable.SequenceEqual(Coefficients, polynomial.Coefficients);
         }
 
         /// <summary>
