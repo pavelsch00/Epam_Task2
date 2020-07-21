@@ -99,20 +99,20 @@ namespace Task3_Tests
             decimal price1 = 340m;
             string type1 = "stationery";
 
-            Stationery food1 = new Stationery(name1, type1, price1);
+            Stationery stationery1 = new Stationery(name1, type1, price1);
 
             string name2 = "Scissors";
             decimal price2 = 340m;
             string type2 = "stationery";
 
-            Book food2Expected = new Book(name2, type2, price2);
+            Book book2Expected = new Book(name2, type2, price2);
 
             // assert;
-            Assert.Equal(food2Expected, (Book)food1);
+            Assert.Equal(book2Expected, (Book)stationery1);
         }
 
         [Fact]
-        public void CastToStationery_Stationery_Food()
+        public void CastToFood_Stationery_Food()
         {
             // arrange
             string name1 = "Scissors";
